@@ -709,3 +709,11 @@ def MDP_Loop(T, deltaT, M, N, L, States, Actions, u0s):
             Opt_act[k][t] = int(np.argmin(rec_f))
         print(Opt_act[t])
     return Opt_val, Opt_act 
+
+np.savetxt('MDP_Opt_act.txt', Opt_act, delimiter=',')
+np.savetxt('MDP_Opt_val.txt', Opt_val, delimiter=',')
+
+
+
+
+
